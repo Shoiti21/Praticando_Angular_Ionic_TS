@@ -1,5 +1,7 @@
 {
   "name": "meu-projeto",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

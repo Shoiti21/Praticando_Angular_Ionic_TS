@@ -25,3 +25,23 @@
 #container a {
   text-decoration: none;
 }
+
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  --ion-color-primary: #F57B87;
+  --ion-color-danger: #D764DE;
+
+  app-search-anime {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+ion-content {
+  --background: linear-gradient(217deg, #FFC173, #ffc07300 70.71%),
+                linear-gradient(127deg, #F57B87, #f57b8700 70.71%);
+}

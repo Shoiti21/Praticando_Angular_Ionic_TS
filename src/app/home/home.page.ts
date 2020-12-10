@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  result: Array<any>;
+
   constructor() {}
+
+  changeResultSearch(event) {
+    this.result = event;
+  }
 
 }

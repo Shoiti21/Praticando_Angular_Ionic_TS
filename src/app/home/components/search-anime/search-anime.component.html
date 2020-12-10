@@ -1,0 +1,29 @@
+<ion-card class="search-anime">
+  <ion-card-header>
+    <ion-row class="div-preview ion-align-items-center ion-text-center">
+      <ion-col>
+        <div *ngIf="!imagePreview && !hasErrorImagePreview">
+          <span>Pesquise o anime</span>
+        </div>
+        <div *ngIf="imagePreview && !hasErrorImagePreview">
+          <ion-img [src]="imagePreview" (ionError)="errorLoading()" (ionImgDidLoad)="concluiedLoading()"></ion-img>
+        </div>
+        <div *ngIf="hasErrorImagePreview">
+          <span>Sua URL é inválida</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card-header>
+
+  <ion-card-content class="div-buttons">
+    <div *ngIf="!resultSearch">
+      <ion-input placeholder="Insira a URL" [disabled]="imageBase64" [(ngModel)]="imageUrl" (ionChange)="onChangeUrl($event)" *ngIf="!imageBase64"></ion-input>
+      <ion-button expand="block" (click) = "selectedImage()" *ngIf="!imageUrl">inserir imagem</ion-button>
+      <ion-button color="danger" expand="block" (click) = "clear()" *ngIf="imageBase64 || imageUrl">cancelar</ion-button>
+      <ion-button [disabled]="!isConcluiedLoading" expand="block" (click) = "search()">procurar</ion-button>
+    </div>
+    <div *ngIf="resultSearch">
+      <ion-button color="danger" expand="block" (click) = "clear()">refazer</ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

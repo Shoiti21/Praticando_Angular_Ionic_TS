@@ -1,0 +1,31 @@
+.search-anime {
+    size: 100%;
+    margin: 20px;
+    ion-card-header {
+        padding: 0px;
+    }
+
+    .div-preview {
+        ion-col {
+            padding: 0px;
+        }
+        background-color: #de856462;
+        height: 200px;
+        vertical-align: middle;
+        ion-img {
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+    .div-buttons {
+        padding: 0px;
+        margin: 20px 15px;
+        ion-button {
+            margin: 10px 0px;
+        }
+    }
+}

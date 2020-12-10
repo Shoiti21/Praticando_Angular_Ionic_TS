@@ -1,0 +1,28 @@
+<ion-list>
+  <ion-item class="item" *ngFor="let item of resultSearch" (click)="playVideoPreview(item)" >
+    <div class="img-preview">
+      <ion-img [src]="imageThumbnail(item)"></ion-img>
+    </div>
+    <div class="details">
+      <p class="title">
+        <span>{{item.title_english}}</span><br>
+        <span class="title-native">{{item.title}}</span>
+      </p>
+      <p class="episode">
+        <span>EP.-{{item.episode}} </span>
+        <span class="episode-time">{{formatTime(item.from, item.to)}}</span>
+      </p>
+    </div>
+    <!-- <ion-label>Pokémon Yellow</ion-label> -->
+  </ion-item>
+</ion-list>
+<ion-row *ngIf="hasVideoPreview && !isApp" class="video-preview ion-align-items-center">
+  <ion-row class="video-preview-button ion-justify-content-center">
+    <ion-button shape="round" (click)="closedVideoPreview()">Fechar</ion-button>
+  </ion-row>
+  <video width="100%" height="auto" controls>
+    <source [src]="srcVideoPreview" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    <source [src]="srcVideoPreview" type='video/webm; codecs="vp8, vorbis"'>
+    <source [src]="srcVideoPreview" type='video/ogg; codecs="theora, vorbis"'>
+  </video>
+<ion-row class="ion-align-items-center">

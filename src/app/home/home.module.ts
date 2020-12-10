@@ -4,8 +4,10 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { SearchAnimeComponent } from './components/search-anime/search-anime.component';
+import { DetailsSearchComponent } from './components/details-search/details-search.component';
 
+import { HomePageRoutingModule } from './home-routing.module';
 
 @NgModule({
   imports: [
@@ -14,6 +16,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    SearchAnimeComponent,
+    DetailsSearchComponent
+  ]
 })
 export class HomePageModule {}

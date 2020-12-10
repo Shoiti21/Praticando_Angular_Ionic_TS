@@ -1,0 +1,45 @@
+.item{
+    .img-preview {
+        width: 40%;
+        height: 150px;
+        ion-img {
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+    .details {
+        width: 60%;
+        margin: 0px 0px 0px 10px;
+        .title {
+            font-size: 14px;
+            color: #F57B87;
+            .title-native {
+                font-size: 12px;  
+            }
+        }
+        .episode {
+            font-size: 13px;
+            color: #D764DE;
+            .episode-time {
+                color: #DE8464;
+            }
+        }
+    }
+}
+.video-preview {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background-color:rgba(0, 0, 0, 0.6);
+    .video-preview-button {
+        width: 100%;
+        position: absolute;
+        bottom: 60px;
+    }
+}
